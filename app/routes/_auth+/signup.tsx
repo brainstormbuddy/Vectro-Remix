@@ -60,25 +60,26 @@ export async function action({ request }: DataFunctionArgs) {
 		return json({ status: 'error', submission } as const, { status: 400 })
 	}
 	const { email } = submission.value
-	const { verifyUrl, redirectTo, otp } = await prepareVerification({
-		period: 10 * 60,
-		request,
-		type: 'onboarding',
-		target: email,
-	})
+	return redirect(`/onboarding?email=${encodeURIComponent(email)}`)
+	// const { verifyUrl, redirectTo, otp } = await prepareVerification({
+	// 	period: 10 * 60,
+	// 	request,
+	// 	type: 'onboarding',
+	// 	target: email,
+	// })
 
-	const response = await sendEmail({
-		to: email,
-		subject: `Welcome to Epic Notes!`,
-		react: <SignupEmail onboardingUrl={verifyUrl.toString()} otp={otp} />,
-	})
+	// const response = await sendEmail({
+	// 	to: email,
+	// 	subject: `Welcome to Epic Notes!`,
+	// 	react: <SignupEmail onboardingUrl={verifyUrl.toString()} otp={otp} />,
+	// })
 
-	if (response.status === 'success') {
-		return redirect(redirectTo.toString())
-	} else {
-		submission.error[''] = [response.error.message]
-		return json({ status: 'error', submission } as const, { status: 500 })
-	}
+	// if (response.status === 'success') {
+	// 	return redirect(redirectTo.toString())
+	// } else {
+	// 	submission.error[''] = [response.error.message]
+	// 	return json({ status: 'error', submission } as const, { status: 500 })
+	// }
 }
 
 export function SignupEmail({
