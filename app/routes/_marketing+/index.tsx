@@ -1,12 +1,12 @@
 import { type MetaFunction } from '@remix-run/node'
-import {
-	Tooltip,
-	TooltipContent,
-	TooltipProvider,
-	TooltipTrigger,
-} from '#app/components/ui/tooltip.tsx'
-import { logos, stars } from './logos/logos.ts'
-import vectroLogo from './logos/vectro-logo-small.png'
+// import {
+// 	Tooltip,
+// 	TooltipContent,
+// 	TooltipProvider,
+// 	TooltipTrigger,
+// } from '#app/components/ui/tooltip.tsx'
+import { stars } from './logos/logos.ts'
+// import vectroLogo from './logos/vectro-logo-small.png'
 import vectroTextLogo from './logos/vectro-logo-text.png'
 
 export const meta: MetaFunction = () => [{ title: 'Epic Notes' }]
@@ -24,7 +24,11 @@ export default function Index() {
 						<div className="lg:pt-18 relative px-4 pb-8 pt-8 sm:px-6 sm:pb-14 sm:pt-16 lg:px-8 lg:pb-20">
 							<h1 className="text-center text-mega font-extrabold tracking-tight sm:text-8xl lg:text-9xl">
 								<div className="flex items-center justify-center">
-									<img className="content-end" src={vectroTextLogo}></img>
+									<img
+										className="content-end"
+										src={vectroTextLogo}
+										alt=""
+									></img>
 								</div>
 							</h1>
 							{/* <p className="mx-auto mt-6 max-w-lg text-center text-xl text-white sm:max-w-3xl">
