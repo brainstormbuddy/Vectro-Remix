@@ -50,12 +50,15 @@ const SignupFormSchema = z
 	.and(PasswordAndConfirmPasswordSchema)
 
 async function requireOnboardingEmail(request: Request) {
+	console.log('woot woot woot')
 	await requireAnonymous(request)
 	const verifySession = await verifySessionStorage.getSession(
 		request.headers.get('cookie'),
 	)
+	console.log('verifySession = ', verifySession)
 	const email = verifySession.get(onboardingEmailSessionKey)
 	if (typeof email !== 'string' || !email) {
+		console.log('email session not found, email=', email)
 		throw redirect('/signup')
 	}
 	return email
@@ -132,6 +135,17 @@ export async function handleVerification({ submission }: VerifyFunctionArgs) {
 			'set-cookie': await verifySessionStorage.commitSession(verifySession),
 		},
 	})
+}
+
+export async function setEmailSessionKey(email: string) {
+	const verifySession = await verifySessionStorage.getSession()
+	verifySession.set(onboardingEmailSessionKey, email)
+	console.log('SID email session key set to ', email)
+	return {
+		headers: {
+			'set-cookie': await verifySessionStorage.commitSession(verifySession),
+		},
+	}
 }
 
 export const meta: MetaFunction = () => {

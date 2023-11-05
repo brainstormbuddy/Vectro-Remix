@@ -1,15 +1,26 @@
-import { type MetaFunction } from '@remix-run/node'
+import { redirect, type MetaFunction } from '@remix-run/node'
 // import {
 // 	Tooltip,
 // 	TooltipContent,
 // 	TooltipProvider,
 // 	TooltipTrigger,
 // } from '#app/components/ui/tooltip.tsx'
-import { stars } from './logos/logos.ts'
 // import vectroLogo from './logos/vectro-logo-small.png'
+import { type DataFunctionArgs } from '@sentry/remix/types/utils/vendor/types.js'
+import { requireUserId } from '#app/utils/auth.server.ts'
+import { prisma } from '#app/utils/db.server.ts'
+import { stars } from './logos/logos.ts'
 import vectroTextLogo from './logos/vectro-logo-text.png'
 
 export const meta: MetaFunction = () => [{ title: 'Vectro' }]
+
+export async function loader({ request }: DataFunctionArgs) {
+	const userId = await requireUserId(request)
+	if (userId) {
+		const user = await prisma.user.findUnique({ where: { id: userId } })
+		throw redirect(`users/${user?.username}/notes`)
+	}
+}
 
 export default function Index() {
 	return (

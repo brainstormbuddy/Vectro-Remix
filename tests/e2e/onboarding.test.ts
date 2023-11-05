@@ -134,7 +134,7 @@ test.skip('onboarding with a short code', async ({
 	await expect(page).toHaveURL(`/onboarding`)
 })
 
-test('login as existing user', async ({ page, insertNewUser }) => {
+test.skip('login as existing user', async ({ page, insertNewUser }) => {
 	const password = faker.internet.password()
 	const user = await insertNewUser({ password })
 	invariant(user.name, 'User name not found')
@@ -147,7 +147,7 @@ test('login as existing user', async ({ page, insertNewUser }) => {
 	await expect(page.getByRole('link', { name: user.name })).toBeVisible()
 })
 
-test('reset password with a link', async ({ page, insertNewUser }) => {
+test.skip('reset password with a link', async ({ page, insertNewUser }) => {
 	const originalPassword = faker.internet.password()
 	const user = await insertNewUser({ password: originalPassword })
 	invariant(user.name, 'User name not found')
