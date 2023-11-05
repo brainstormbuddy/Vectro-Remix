@@ -7,8 +7,9 @@ import { useIsPending } from './misc.tsx'
 export const GITHUB_PROVIDER_NAME = 'github'
 // to add another provider, set their name here and add it to the providerNames below
 
-export const providerNames = [GITHUB_PROVIDER_NAME] as const
-export const ProviderNameSchema = z.enum(providerNames)
+// export const providerNames = [GITHUB_PROVIDER_NAME] as const
+export const providerNames = [] as const
+export const ProviderNameSchema = z.enum([GITHUB_PROVIDER_NAME])
 export type ProviderName = z.infer<typeof ProviderNameSchema>
 
 export const providerLabels: Record<ProviderName, string> = {
