@@ -141,11 +141,11 @@ export async function setEmailSessionKey(email: string) {
 	const verifySession = await verifySessionStorage.getSession()
 	verifySession.set(onboardingEmailSessionKey, email)
 	console.log('SID email session key set to ', email)
-	return redirect('/onboarding', {
+	return {
 		headers: {
 			'set-cookie': await verifySessionStorage.commitSession(verifySession),
 		},
-	})
+	}
 }
 
 export const meta: MetaFunction = () => {

@@ -28,6 +28,7 @@ import { useRef } from 'react'
 import { AuthenticityTokenProvider } from 'remix-utils/csrf/react'
 import { HoneypotProvider } from 'remix-utils/honeypot/react'
 import { z } from 'zod'
+import vectroLogoText from '#app/routes/_marketing+/logos/vectro-logo-text.png'
 import { Confetti } from './components/confetti.tsx'
 import { GeneralErrorBoundary } from './components/error-boundary.tsx'
 import { ErrorList } from './components/forms.tsx'
@@ -250,6 +251,9 @@ function App() {
 								<div className="font-light">epic</div>
 								<div className="font-bold">notes</div>
 							</Link> */}
+							<Link to="/">
+								<img src={vectroLogoText} alt="Vectro Home" className="h-8" />
+							</Link>
 							<div className="ml-auto hidden max-w-sm flex-1 sm:block">
 								{searchBar}
 							</div>

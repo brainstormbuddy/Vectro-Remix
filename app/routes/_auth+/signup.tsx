@@ -24,7 +24,7 @@ import { prisma } from '#app/utils/db.server.ts'
 import { checkHoneypot } from '#app/utils/honeypot.server.ts'
 import { useIsPending } from '#app/utils/misc.tsx'
 import { EmailSchema } from '#app/utils/user-validation.ts'
-import { handleVerification, setEmailSessionKey } from './onboarding.tsx'
+import { setEmailSessionKey } from './onboarding.tsx'
 // import { prepareVerification } from './verify.tsx'
 
 const SignupSchema = z.object({
@@ -62,9 +62,9 @@ export async function action({ request }: DataFunctionArgs) {
 	}
 	const { email } = submission.value
 	console.log('email', email)
-	await setEmailSessionKey(email)
-	console.log('await returned')
-	return redirect(`/onboarding?email=${encodeURIComponent(email)}`)
+	const headers = await setEmailSessionKey(email)
+	console.log('await returned redFunction', headers)
+	return redirect(`/onboarding?email=${encodeURIComponent(email)}`, headers)
 	// const { verifyUrl, redirectTo, otp } = await prepareVerification({
 	// 	period: 10 * 60,
 	// 	request,

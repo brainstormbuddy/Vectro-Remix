@@ -15,6 +15,7 @@ import { GeneralErrorBoundary } from '#app/components/error-boundary.tsx'
 import { CheckboxField, ErrorList, Field } from '#app/components/forms.tsx'
 import { Spacer } from '#app/components/spacer.tsx'
 import { StatusButton } from '#app/components/ui/status-button.tsx'
+import vectroLogoSmall from '#app/routes/_marketing+/logos/vectro-logo-small.png'
 import { twoFAVerificationType } from '#app/routes/settings+/profile.two-factor.tsx'
 import {
 	getUserId,
@@ -22,10 +23,6 @@ import {
 	requireAnonymous,
 	sessionKey,
 } from '#app/utils/auth.server.ts'
-import {
-	ProviderConnectionForm,
-	providerNames,
-} from '#app/utils/connections.tsx'
 import { validateCSRF } from '#app/utils/csrf.server.ts'
 import { prisma } from '#app/utils/db.server.ts'
 import { checkHoneypot } from '#app/utils/honeypot.server.ts'
@@ -262,6 +259,11 @@ export default function LoginPage() {
 		<div className="flex min-h-full flex-col justify-center pb-32 pt-20">
 			<div className="mx-auto w-full max-w-md">
 				<div className="flex flex-col gap-3 text-center">
+					<img
+						className="h-18 w-18 mx-auto"
+						src={vectroLogoSmall}
+						alt="Vectro Logo"
+					/>
 					<h1 className="text-h1">Welcome back!</h1>
 					<p className="text-body-md text-muted-foreground">
 						Please enter your details.
@@ -329,7 +331,7 @@ export default function LoginPage() {
 								</StatusButton>
 							</div>
 						</Form>
-						<ul className="mt-5 flex flex-col gap-5 border-b-2 border-t-2 border-border py-3">
+						{/* <ul className="mt-5 flex flex-col gap-5 border-b-2 border-t-2 border-border py-3">
 							{providerNames.map(providerName => (
 								<li key={providerName}>
 									<ProviderConnectionForm
@@ -339,7 +341,7 @@ export default function LoginPage() {
 									/>
 								</li>
 							))}
-						</ul>
+						</ul> */}
 						<div className="flex items-center justify-center gap-2 pt-6">
 							<span className="text-muted-foreground">New here?</span>
 							<Link
