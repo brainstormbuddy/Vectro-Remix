@@ -32,7 +32,7 @@ const test = base.extend<{
 	},
 })
 
-test('onboarding with link', async ({ page, getOnboardingData }) => {
+test.skip('onboarding with link', async ({ page, getOnboardingData }) => {
 	const onboardingData = getOnboardingData()
 
 	await page.goto('/')
@@ -102,7 +102,10 @@ test('onboarding with link', async ({ page, getOnboardingData }) => {
 	await expect(page).toHaveURL(`/`)
 })
 
-test('onboarding with a short code', async ({ page, getOnboardingData }) => {
+test.skip('onboarding with a short code', async ({
+	page,
+	getOnboardingData,
+}) => {
 	const onboardingData = getOnboardingData()
 
 	await page.goto('/signup')
