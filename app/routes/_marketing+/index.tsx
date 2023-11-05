@@ -9,7 +9,7 @@ import { stars } from './logos/logos.ts'
 // import vectroLogo from './logos/vectro-logo-small.png'
 import vectroTextLogo from './logos/vectro-logo-text.png'
 
-export const meta: MetaFunction = () => [{ title: 'Epic Notes' }]
+export const meta: MetaFunction = () => [{ title: 'Vectro' }]
 
 export default function Index() {
 	return (
