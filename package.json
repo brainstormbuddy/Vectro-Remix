@@ -59,6 +59,8 @@
     "@remix-run/react": "^2.1.0",
     "@remix-run/server-runtime": "^2.1.0",
     "@sentry/remix": "^7.70.0",
+    "@tabler/icons": "^2.40.0",
+    "@tabler/icons-react": "^2.40.0",
     "address": "^2.0.1",
     "autoprefixer": "^10.4.16",
     "bcryptjs": "^2.4.3",

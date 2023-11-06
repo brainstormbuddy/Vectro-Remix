@@ -34,9 +34,9 @@ export default function NoteEdit() {
 			<div className="flex">
 				<div className="mx-auto">
 					<h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
-						Dashboard
+						Jot Dashboard
 					</h1>
-					<div className="flex flex-col space-y-10">
+					<div className="flex basis-10 flex-col space-y-5">
 						<MomentsOfGreatness />
 						{/* <MomentsOfGreatness /> */}
 					</div>
@@ -78,8 +78,10 @@ function MomentsOfGreatness() {
 	const rows = elements.map(element => (
 		<Table.Tr key={element.name}>
 			<Table.Td>
-				<Avatar />
-				{element.name}
+				<div className="justify-left flex items-center gap-2">
+					<Avatar />
+					{element.name}
+				</div>
 			</Table.Td>
 			<Table.Td>{element.description}</Table.Td>
 			<Table.Td>{element.link}</Table.Td>
@@ -89,16 +91,18 @@ function MomentsOfGreatness() {
 	return (
 		<>
 			<Title order={3}>Moments of Greatness</Title>
-			<Table verticalSpacing="sm">
-				<Table.Thead>
-					<Table.Tr>
-						<Table.Th>Rep Name</Table.Th>
-						<Table.Th>Description</Table.Th>
-						<Table.Th>Link</Table.Th>
-					</Table.Tr>
-				</Table.Thead>
-				<Table.Tbody>{rows}</Table.Tbody>
-			</Table>
+			<Table.ScrollContainer minWidth={1000}>
+				<Table verticalSpacing="sm">
+					<Table.Thead>
+						<Table.Tr>
+							<Table.Th>Rep Name</Table.Th>
+							<Table.Th>Description</Table.Th>
+							<Table.Th>Link</Table.Th>
+						</Table.Tr>
+					</Table.Thead>
+					<Table.Tbody>{rows}</Table.Tbody>
+				</Table>
+			</Table.ScrollContainer>
 		</>
 	)
 }
