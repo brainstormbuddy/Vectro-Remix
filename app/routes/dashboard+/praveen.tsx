@@ -1,4 +1,4 @@
-import { Table, Avatar, Title, rem } from '@mantine/core'
+import { Table, Title, rem } from '@mantine/core'
 import { type DataFunctionArgs } from '@remix-run/node'
 import { useLoaderData } from '@remix-run/react'
 import { IconCheck } from '@tabler/icons-react'
