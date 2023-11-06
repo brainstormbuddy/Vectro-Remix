@@ -1,5 +1,6 @@
 import { useForm } from '@conform-to/react'
 import { parse } from '@conform-to/zod'
+import { MantineProvider, ColorSchemeScript } from '@mantine/core'
 import { cssBundleHref } from '@remix-run/css-bundle'
 import {
 	json,
@@ -60,6 +61,7 @@ import { type Theme, setTheme, getTheme } from './utils/theme.server.ts'
 import { makeTimings, time } from './utils/timing.server.ts'
 import { getToast } from './utils/toast.server.ts'
 import { useOptionalUser, useUser } from './utils/user.ts'
+import '@mantine/core/styles.css'
 
 export const links: LinksFunction = () => {
 	return [
@@ -215,18 +217,21 @@ function Document({
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width,initial-scale=1" />
 				<Links />
+				<ColorSchemeScript />
 			</head>
 			<body className="bg-background text-foreground">
-				{children}
-				<script
-					nonce={nonce}
-					dangerouslySetInnerHTML={{
-						__html: `window.ENV = ${JSON.stringify(env)}`,
-					}}
-				/>
-				<ScrollRestoration nonce={nonce} />
-				<Scripts nonce={nonce} />
-				<LiveReload nonce={nonce} />
+				<MantineProvider>
+					{children}
+					<script
+						nonce={nonce}
+						dangerouslySetInnerHTML={{
+							__html: `window.ENV = ${JSON.stringify(env)}`,
+						}}
+					/>
+					<ScrollRestoration nonce={nonce} />
+					<Scripts nonce={nonce} />
+					<LiveReload nonce={nonce} />
+				</MantineProvider>
 			</body>
 		</html>
 	)
