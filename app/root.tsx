@@ -93,7 +93,7 @@ export const links: LinksFunction = () => {
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
 	return [
-		{ title: data ? 'Epic Notes' : 'Error | Epic Notes' },
+		{ title: data ? 'Vectro' : 'Error | Vectro' },
 		{ name: 'description', content: `Your own captain's log` },
 	]
 }
@@ -259,9 +259,9 @@ function App() {
 							<Link to="/">
 								<img src={vectroLogoText} alt="Vectro Home" className="h-8" />
 							</Link>
-							<div className="ml-auto hidden max-w-sm flex-1 sm:block">
+							{/* <div className="ml-auto hidden max-w-sm flex-1 sm:block">
 								{searchBar}
-							</div>
+							</div> */}
 							<div className="flex items-center gap-10">
 								{user ? (
 									<UserDropdown />

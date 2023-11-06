@@ -97,7 +97,7 @@ export function SignupEmail({
 		<E.Html lang="en" dir="ltr">
 			<E.Container>
 				<h1>
-					<E.Text>Welcome to Epic Notes!</E.Text>
+					<E.Text>Welcome to Vectro!</E.Text>
 				</h1>
 				<p>
 					<E.Text>
@@ -114,7 +114,7 @@ export function SignupEmail({
 }
 
 export const meta: MetaFunction = () => {
-	return [{ title: 'Sign Up | Epic Notes' }]
+	return [{ title: 'Sign Up | Vectro' }]
 }
 
 export default function SignupRoute() {
