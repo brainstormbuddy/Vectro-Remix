@@ -223,7 +223,7 @@ const featuresElements = [
 	},
 	{
 		feature: 'Custom checkout links for insureds',
-		kaylin: false,
+		kaylin: true,
 		chris_s_mcdonald: true,
 		chris_s: true,
 		chris_p: false,
@@ -237,7 +237,7 @@ const featuresElements = [
 	},
 	{
 		feature: 'Branded email communications',
-		kaylin: false,
+		kaylin: true,
 		chris_s_mcdonald: false,
 		chris_s: true,
 		chris_p: true,
