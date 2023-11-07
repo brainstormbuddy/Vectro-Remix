@@ -251,7 +251,7 @@ const featuresElements = [
 	},
 	{
 		feature: 'Integration with NowCerts/AMS',
-		kaylin: false,
+		kaylin: true,
 		chris_s_mcdonald: true,
 		chris_s: true,
 		chris_p: false,
