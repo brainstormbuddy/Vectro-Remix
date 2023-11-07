@@ -38,13 +38,13 @@ export default function DashboardIndex() {
 					</h1>
 					<ul className="list-disc">
 						<li className="">
-							<Link to={'praveen'}>
-								<Anchor size="lg">Praveen's Dashboard</Anchor>{' '}
+							<Link to={'pitch'}>
+								<Anchor size="lg">Pitch Dashboard</Anchor>
 							</Link>
 						</li>
 						<li className="">
-							<Link to={'jot'}>
-								<Anchor size="lg">Jot's Dashboard</Anchor>{' '}
+							<Link to={'salesops'}>
+								<Anchor size="lg">Sales Ops Dashboard</Anchor>
 							</Link>
 						</li>
 					</ul>

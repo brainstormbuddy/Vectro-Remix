@@ -35,7 +35,7 @@ export default function NoteEdit() {
 			<div className="flex">
 				<div className="mx-auto">
 					<h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
-						Praveen's Dashboard
+						Pitch Dashboard
 					</h1>
 					<div className="flex basis-10 flex-col space-y-5">
 						<CompanyPositioningAcrossCalls />
@@ -50,7 +50,7 @@ export default function NoteEdit() {
 
 const check = (
 	<IconCheck
-		style={{ width: rem(40), height: rem(40) }}
+		style={{ width: rem(20), height: rem(20) }}
 		stroke={1.5}
 		color="var(--mantine-color-blue-filled)"
 	/>
@@ -114,13 +114,6 @@ const elements = [
 		frequency: 1,
 	},
 	{
-		key_points: 'Reduction in Non-Pay Cancellations',
-		// kailyn_insurance_one: check,
-		chris_mcdonald: check,
-		// chris_guidelight: check,
-		frequency: 1,
-	},
-	{
 		key_points: 'Focus on Growth & Strategic Initiatives',
 		// kailyn_insurance_one: check,
 		chris_mcdonald: check,
@@ -174,13 +167,35 @@ function CompanyPositioningAcrossCalls() {
 		<>
 			<Title order={3}>Company Positioning Across Calls</Title>
 			<Table.ScrollContainer minWidth={500}>
-				<Table verticalSpacing="sm">
+				<Table
+					verticalSpacing="sm"
+					// layout="auto"
+					// classNames={{
+					// th: 'w-20',
+					// }}
+					horizontalSpacing={30}
+				>
 					<Table.Thead>
 						<Table.Tr>
 							<Table.Th>Key Points</Table.Th>
-							<Table.Th>Kailyn - Insurance One</Table.Th>
-							<Table.Th>Christopher - Mcdonald Insurance</Table.Th>
-							<Table.Th>Christopher - Guidelight</Table.Th>
+							<Table.Th>
+								<div className="mx-auto flex flex-col align-middle">
+									<div className="text-center">Kailyn</div> <div></div>
+									Insurance One
+								</div>
+							</Table.Th>
+							<Table.Th>
+								<div className="mx-auto flex flex-col align-middle">
+									<div className="text-center">Chris</div> <div></div>
+									Mcdonald Insurance
+								</div>
+							</Table.Th>
+							<Table.Th>
+								<div className="mx-auto flex flex-col align-middle">
+									<div className="text-center">Chris</div> <div></div>
+									Guidelight
+								</div>
+							</Table.Th>
 							<Table.Th>Frequency</Table.Th>
 						</Table.Tr>
 					</Table.Thead>
@@ -320,18 +335,33 @@ function get_icon(enabled: boolean) {
 	return null
 }
 
+function get_freq(element) {
+	var i = 0
+	for (var key of Object.keys(element)) {
+		if (typeof element[key] == 'boolean') {
+			i += element[key]
+		}
+	}
+	return i
+}
+
 function FeaturesPitchedAcrossCalls() {
 	const rows = featuresElements.map(element => (
 		<Table.Tr key={element.feature}>
 			<Table.Td>{element.feature}</Table.Td>
 			<Table.Td>
 				<div className="flex">
-					<div className="mx-auto">{get_icon(element.chris_s)}</div>
+					<div className="mx-auto">{get_icon(element.kaylin)}</div>
 				</div>
 			</Table.Td>
 			<Table.Td>
 				<div className="flex">
-					<div className="mx-auto">{get_icon(element.kaylin)}</div>
+					<div className="mx-auto">{get_icon(element.chris_s_mcdonald)}</div>
+				</div>
+			</Table.Td>
+			<Table.Td>
+				<div className="flex">
+					<div className="mx-auto">{get_icon(element.chris_s)}</div>
 				</div>
 			</Table.Td>
 			<Table.Td>
@@ -341,7 +371,7 @@ function FeaturesPitchedAcrossCalls() {
 			</Table.Td>
 			<Table.Td>
 				<div className="flex">
-					<div className="mx-auto">{get_icon(element.chris_s_mcdonald)}</div>
+					<div className="mx-auto">{get_freq(element)}</div>
 				</div>
 			</Table.Td>
 		</Table.Tr>
@@ -351,14 +381,36 @@ function FeaturesPitchedAcrossCalls() {
 		<>
 			<Title order={3}>Features Pitched Across Calls</Title>
 			<Table.ScrollContainer minWidth={500}>
-				<Table verticalSpacing="sm">
+				<Table
+					verticalSpacing="sm"
+					layout="auto"
+					classNames={{
+						th: 'w-50',
+					}}
+				>
 					<Table.Thead>
 						<Table.Tr>
-							<Table.Th>Feature</Table.Th>
-							<Table.Th>Chris S</Table.Th>
-							<Table.Th>Kaylin</Table.Th>
-							<Table.Th>Chris P</Table.Th>
-							<Table.Th>Chris S McDonald</Table.Th>
+							<Table.Th className="w-20">Feature</Table.Th>
+							<Table.Th>
+								<div className="text-center">Kaylin</div>
+							</Table.Th>
+							<Table.Th>
+								<div className="flex flex-col align-middle">
+									<div className="text-center">Christopher</div>
+									<div className="text-center">Mcdonald Insurance</div>
+								</div>
+							</Table.Th>
+							<Table.Th>
+								<div className="text-center">Christopher</div>
+								<div className="text-center">Guidelight</div>
+							</Table.Th>
+							<Table.Th>
+								<div className="text-center">Chris P</div>
+								<div className="text-center">Blueridge</div>
+							</Table.Th>
+							<Table.Th>
+								<div className="text-center">Frequency</div>
+							</Table.Th>
 						</Table.Tr>
 					</Table.Thead>
 					<Table.Tbody>{rows}</Table.Tbody>
