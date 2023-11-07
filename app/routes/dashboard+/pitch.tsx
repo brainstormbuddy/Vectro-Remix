@@ -335,6 +335,7 @@ function get_icon(enabled: boolean) {
 	return null
 }
 
+// @ts-ignore
 function get_freq(element) {
 	var i = 0
 	for (var key of Object.keys(element)) {
