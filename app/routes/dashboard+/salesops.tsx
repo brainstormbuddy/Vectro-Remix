@@ -1,8 +1,8 @@
 import { Table, Avatar, Title, Anchor } from '@mantine/core'
 import { type DataFunctionArgs } from '@remix-run/node'
 import { useLoaderData } from '@remix-run/react'
-import kailynProfile from '#app/assets/kailyn.jpeg'
 import chrisProfile from '#app/assets/chris.jpeg'
+import kailynProfile from '#app/assets/kailyn.jpeg'
 import { requireUserId } from '#app/utils/auth.server.ts'
 import { prisma } from '#app/utils/db.server.ts'
 

@@ -186,13 +186,13 @@ function CompanyPositioningAcrossCalls() {
 							</Table.Th>
 							<Table.Th>
 								<div className="mx-auto flex flex-col align-middle">
-									<div className="text-center">Chris</div> <div></div>
+									<div className="text-center">Christopher</div> <div></div>
 									Mcdonald Insurance
 								</div>
 							</Table.Th>
 							<Table.Th>
 								<div className="mx-auto flex flex-col align-middle">
-									<div className="text-center">Chris</div> <div></div>
+									<div className="text-center">Christopher</div> <div></div>
 									Guidelight
 								</div>
 							</Table.Th>
