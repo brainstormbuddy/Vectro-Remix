@@ -436,6 +436,7 @@ function FeaturesPitchedAcrossCalls() {
 							<Table.Th className="w-20">Feature</Table.Th>
 							<Table.Th>
 								<div className="text-center">Kaylin</div>
+								<div className="text-center">Insurance One</div>
 							</Table.Th>
 							<Table.Th>
 								<div className="flex flex-col align-middle">
