@@ -1,6 +1,7 @@
-import { Table, Avatar, Title } from '@mantine/core'
+import { Table, Avatar, Title, Anchor } from '@mantine/core'
 import { type DataFunctionArgs } from '@remix-run/node'
 import { useLoaderData } from '@remix-run/react'
+import kailynProfile from '#app/assets/kailyn.jpeg'
 import { requireUserId } from '#app/utils/auth.server.ts'
 import { prisma } from '#app/utils/db.server.ts'
 
@@ -48,29 +49,14 @@ export default function NoteEdit() {
 
 const elements = [
 	{
-		link: 'www.google.com',
+		link: 'https://grain.com/share/highlight/CKK3D2VslMfwysV5cY71HjxhC2lIoSCdVID3HKFE',
 		description: 'Ref existing customer',
-		name: 'Steph Curry',
+		name: 'Kailyn',
 	},
 	{
-		link: 'www.google.com',
-		description: 'Offers 2:1 demo',
-		name: 'Klay Thompson',
-	},
-	{
-		link: 'www.google.com',
-		description: 'Ref existing customer',
-		name: 'CP3',
-	},
-	{
-		link: 'www.google.com',
-		description: 'Ref existing customer',
-		name: 'GP2',
-	},
-	{
-		link: 'www.google.com',
-		description: 'Ref existing customer',
-		name: 'Draymond Green',
+		link: 'https://grain.com/share/highlight/PTA3OhIKQQnlavmVA7enoVhUg6GXYEIHaCjUueGB',
+		description: 'Offer 2:1 demo',
+		name: 'Kailyn',
 	},
 ]
 
@@ -79,12 +65,14 @@ function MomentsOfGreatness() {
 		<Table.Tr key={element.name}>
 			<Table.Td>
 				<div className="justify-left flex items-center gap-2">
-					<Avatar />
+					<Avatar src={kailynProfile} />
 					{element.name}
 				</div>
 			</Table.Td>
 			<Table.Td>{element.description}</Table.Td>
-			<Table.Td>{element.link}</Table.Td>
+			<Table.Td>
+				<Anchor href={element.link}>Link</Anchor>
+			</Table.Td>
 		</Table.Tr>
 	))
 
