@@ -139,7 +139,7 @@ const elements = [
 function CompanyPositioningAcrossCalls() {
 	const rows = elements.map(element => (
 		<Table.Tr key={element.key_points}>
-			<Table.Td>{element.key_points}</Table.Td>
+			<Table.Td className="whitespace-nowrap">{element.key_points}</Table.Td>
 			<Table.Td>
 				<div className="flex">
 					<div className="mx-auto">{element.kailyn_insurance_one}</div>
@@ -180,8 +180,8 @@ function CompanyPositioningAcrossCalls() {
 							<Table.Th>Key Points</Table.Th>
 							<Table.Th>
 								<div className="mx-auto flex flex-col align-middle">
-									<div className="text-center">Kailyn</div> <div></div>
-									Insurance One
+									<div className="text-center">Kailyn</div>
+									<div className="text-center">Insurance One</div>
 								</div>
 							</Table.Th>
 							<Table.Th>
@@ -196,7 +196,7 @@ function CompanyPositioningAcrossCalls() {
 									Guidelight
 								</div>
 							</Table.Th>
-							<Table.Th>Frequency</Table.Th>
+							<Table.Th>Total</Table.Th>
 						</Table.Tr>
 					</Table.Thead>
 					<Table.Tbody>{rows}</Table.Tbody>
@@ -209,122 +209,164 @@ function CompanyPositioningAcrossCalls() {
 const featuresElements = [
 	{
 		feature: 'Streamlined accounts processes',
-		chris_s: true,
 		kaylin: true,
-		chris_p: true,
 		chris_s_mcdonald: true,
+		chris_s: true,
+		chris_p: true,
 	},
 	{
 		feature: 'Commission netting and market payments',
-		chris_s: true,
 		kaylin: true,
+		chris_s_mcdonald: false,
+		chris_s: true,
 		chris_p: true,
-		chris_s_mcdonald: true,
 	},
 	{
 		feature: 'Custom checkout links for insureds',
-		chris_s: true,
 		kaylin: false,
-		chris_p: true,
 		chris_s_mcdonald: true,
+		chris_s: true,
+		chris_p: false,
 	},
 	{
 		feature: 'Ability to pay in full or enroll in financing',
+		kaylin: false,
+		chris_s_mcdonald: false,
 		chris_s: true,
-		kaylin: true,
-		chris_p: false,
-		chris_s_mcdonald: true,
+		chris_p: true,
 	},
 	{
 		feature: 'Branded email communications',
-		chris_s: true,
 		kaylin: false,
-		chris_p: false,
-		chris_s_mcdonald: true,
+		chris_s_mcdonald: false,
+		chris_s: true,
+		chris_p: true,
 	},
 	{
 		feature: 'Visibility & tracking of payments/receivables',
-		chris_s: true,
 		kaylin: false,
-		chris_p: false,
 		chris_s_mcdonald: true,
+		chris_s: true,
+		chris_p: false,
 	},
 	{
 		feature: 'Integration with NowCerts/AMS',
-		chris_s: true,
 		kaylin: false,
-		chris_p: true,
 		chris_s_mcdonald: true,
+		chris_s: true,
+		chris_p: false,
 	},
 	{
 		feature: 'Automated payment reminders',
-		chris_s: false,
 		kaylin: true,
-		chris_p: true,
 		chris_s_mcdonald: true,
+		chris_s: false,
+		chris_p: false,
 	},
 	{
 		feature: 'Account manager dashboard',
-		chris_s: false,
-		kaylin: true,
-		chris_p: true,
+		kaylin: false,
 		chris_s_mcdonald: true,
+		chris_s: false,
+		chris_p: true,
 	},
 	{
 		feature: 'Policy information management',
-		chris_s: true,
-		kaylin: false,
-		chris_p: true,
+		kaylin: true,
 		chris_s_mcdonald: true,
+		chris_s: false,
+		chris_p: false,
 	},
 	{
 		feature: 'Financing agreement management',
-		chris_s: true,
 		kaylin: true,
-		chris_p: false,
 		chris_s_mcdonald: false,
+		chris_s: false,
+		chris_p: true,
 	},
 	{
 		feature: 'Addition of fees and charges',
-		chris_s: true,
 		kaylin: false,
-		chris_p: false,
 		chris_s_mcdonald: false,
+		chris_s: true,
+		chris_p: false,
 	},
 	{
 		feature: 'Uploading documents & selecting coverage',
-		chris_s: true,
-		kaylin: false,
+		kaylin: true,
+		chris_s_mcdonald: false,
+		chris_s: false,
 		chris_p: false,
-		chris_s_mcdonald: true,
 	},
 	{
 		feature: 'E-signature collection',
-		chris_s: true,
-		kaylin: false,
+		kaylin: true,
+		chris_s_mcdonald: false,
+		chris_s: false,
 		chris_p: false,
-		chris_s_mcdonald: true,
 	},
 	{
 		feature: 'Self-service customer portal',
-		chris_s: false,
-		kaylin: true,
-		chris_p: false,
+		kaylin: false,
 		chris_s_mcdonald: true,
+		chris_s: false,
+		chris_p: false,
 	},
 	{
 		feature: 'Integration with Plaid',
-		chris_s: false,
 		kaylin: false,
-		chris_p: true,
 		chris_s_mcdonald: true,
+		chris_s: false,
+		chris_p: false,
 	},
 	{
 		feature: 'Cash flow management',
-		chris_s: false,
 		kaylin: false,
-		chris_p: true,
 		chris_s_mcdonald: true,
+		chris_s: false,
+		chris_p: false,
+	},
+	{
+		feature: 'ROI calculator',
+		kaylin: false,
+		chris_s_mcdonald: true,
+		chris_s: false,
+		chris_p: false,
+	},
+	{
+		feature: 'Internal payment notifications',
+		kaylin: false,
+		chris_s_mcdonald: false,
+		chris_s: false,
+		chris_p: true,
+	},
+	{
+		feature: 'Accounts payable & receivable on per policy basis',
+		kaylin: true,
+		chris_s_mcdonald: false,
+		chris_s: false,
+		chris_p: false,
+	},
+	{
+		feature: 'Auto pay enabling',
+		kaylin: true,
+		chris_s_mcdonald: false,
+		chris_s: false,
+		chris_p: false,
+	},
+	{
+		feature: 'Comission approvals and net premium handling',
+		kaylin: true,
+		chris_s_mcdonald: false,
+		chris_s: false,
+		chris_p: false,
+	},
+	{
+		feature: 'Record-keeping for reciepts and invoices',
+		kaylin: true,
+		chris_s_mcdonald: false,
+		chris_s: false,
+		chris_p: false,
 	},
 ]
 
@@ -349,7 +391,7 @@ function get_freq(element) {
 function FeaturesPitchedAcrossCalls() {
 	const rows = featuresElements.map(element => (
 		<Table.Tr key={element.feature}>
-			<Table.Td>{element.feature}</Table.Td>
+			<Table.Td className="whitespace-nowrap">{element.feature}</Table.Td>
 			<Table.Td>
 				<div className="flex">
 					<div className="mx-auto">{get_icon(element.kaylin)}</div>
@@ -410,7 +452,7 @@ function FeaturesPitchedAcrossCalls() {
 								<div className="text-center">Blueridge</div>
 							</Table.Th>
 							<Table.Th>
-								<div className="text-center">Frequency</div>
+								<div className="text-center">Total</div>
 							</Table.Th>
 						</Table.Tr>
 					</Table.Thead>
