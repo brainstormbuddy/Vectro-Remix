@@ -167,14 +167,7 @@ function CompanyPositioningAcrossCalls() {
 		<>
 			<Title order={3}>Company Positioning Across Calls</Title>
 			<Table.ScrollContainer minWidth={500}>
-				<Table
-					verticalSpacing="sm"
-					// layout="auto"
-					// classNames={{
-					// th: 'w-20',
-					// }}
-					horizontalSpacing={30}
-				>
+				<Table verticalSpacing="sm" horizontalSpacing={30}>
 					<Table.Thead>
 						<Table.Tr>
 							<Table.Th>Key Points</Table.Th>
@@ -186,13 +179,13 @@ function CompanyPositioningAcrossCalls() {
 							</Table.Th>
 							<Table.Th>
 								<div className="mx-auto flex flex-col align-middle">
-									<div className="text-center">Christopher</div> <div></div>
+									<div className="text-center">Christopher S</div> <div></div>
 									Mcdonald Insurance
 								</div>
 							</Table.Th>
 							<Table.Th>
 								<div className="mx-auto flex flex-col align-middle">
-									<div className="text-center">Christopher</div> <div></div>
+									<div className="text-center">Christopher S</div> <div></div>
 									Guidelight
 								</div>
 							</Table.Th>
@@ -424,13 +417,7 @@ function FeaturesPitchedAcrossCalls() {
 		<>
 			<Title order={3}>Features Pitched Across Calls</Title>
 			<Table.ScrollContainer minWidth={500}>
-				<Table
-					verticalSpacing="sm"
-					layout="auto"
-					classNames={{
-						th: 'w-50',
-					}}
-				>
+				<Table verticalSpacing="sm" layout="auto">
 					<Table.Thead>
 						<Table.Tr>
 							<Table.Th className="w-20">Feature</Table.Th>
@@ -440,12 +427,12 @@ function FeaturesPitchedAcrossCalls() {
 							</Table.Th>
 							<Table.Th>
 								<div className="flex flex-col align-middle">
-									<div className="text-center">Christopher</div>
+									<div className="text-center">Christopher S</div>
 									<div className="text-center">Mcdonald Insurance</div>
 								</div>
 							</Table.Th>
 							<Table.Th>
-								<div className="text-center">Christopher</div>
+								<div className="text-center">Christopher S</div>
 								<div className="text-center">Guidelight</div>
 							</Table.Th>
 							<Table.Th>
