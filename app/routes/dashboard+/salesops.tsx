@@ -38,7 +38,7 @@ export default function SalesOpDashboard() {
 					<h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
 						Sales Ops Dashboard
 					</h1>
-					<div className="flex basis-10 flex-col space-y-10">
+					<div className="mt-10 flex flex-col space-y-10">
 						<MomentsOfGreatness />
 						<ReviewMoments />
 						<Scoring />
@@ -54,12 +54,12 @@ const elements = [
 	{
 		link: 'https://grain.com/share/highlight/CKK3D2VslMfwysV5cY71HjxhC2lIoSCdVID3HKFE',
 		description: 'Ref existing customer',
-		name: 'Kailyn',
+		name: 'Kailyn D',
 	},
 	{
 		link: 'https://grain.com/share/highlight/PTA3OhIKQQnlavmVA7enoVhUg6GXYEIHaCjUueGB',
 		description: 'Offer 2:1 demo',
-		name: 'Kailyn',
+		name: 'Kailyn D',
 	},
 ]
 
@@ -80,10 +80,10 @@ function MomentsOfGreatness() {
 	))
 
 	return (
-		<>
+		<div className="w-min">
 			<Title order={3}>Moments of Greatness</Title>
-			<Table.ScrollContainer minWidth={500}>
-				<Table verticalSpacing="sm" horizontalSpacing={75}>
+			<Table.ScrollContainer minWidth={800}>
+				<Table horizontalSpacing={25}>
 					<Table.Thead>
 						<Table.Tr>
 							<Table.Th>Rep Name</Table.Th>
@@ -94,7 +94,7 @@ function MomentsOfGreatness() {
 					<Table.Tbody>{rows}</Table.Tbody>
 				</Table>
 			</Table.ScrollContainer>
-		</>
+		</div>
 	)
 }
 
@@ -102,7 +102,7 @@ const reviewElements = [
 	{
 		link: 'https://grain.com/share/highlight/CKK3D2VslMfwysV5cY71HjxhC2lIoSCdVID3HKFE',
 		description: 'Update slide to latest version',
-		name: 'Kailyn',
+		name: 'Kailyn D',
 		image: kailynProfile,
 	},
 	{
@@ -130,10 +130,10 @@ function ReviewMoments() {
 	))
 
 	return (
-		<>
+		<div className="w-min">
 			<Title order={3}>Review Moments</Title>
-			<Table.ScrollContainer minWidth={500}>
-				<Table verticalSpacing="sm" horizontalSpacing={75}>
+			<Table.ScrollContainer minWidth={800}>
+				<Table horizontalSpacing={25}>
 					<Table.Thead>
 						<Table.Tr>
 							<Table.Th>Name</Table.Th>
@@ -144,53 +144,53 @@ function ReviewMoments() {
 					<Table.Tbody>{rows}</Table.Tbody>
 				</Table>
 			</Table.ScrollContainer>
-		</>
+		</div>
 	)
 }
 
 const scoringElements = [
 	{
-		name: 'Kailyn',
-		intro: 8.5,
-		callControl: 8.5,
-		qualificationRecap: 8.5,
-		discovery: 8.5,
-		championBuilding: 8.5,
-		businessCaseBuilding: 8.5,
-		objectionHandling: 8.5,
+		name: 'Christopher S',
+		intro: 7,
+		callControl: 9,
+		qualificationRecap: 7,
+		discovery: 9,
+		championBuilding: 9,
+		businessCaseBuilding: 8,
+		objectionHandling: 6,
 		closingAbilities: 9,
 	},
 	{
-		name: 'Christopher',
-		intro: 8.5,
-		callControl: 8.5,
-		qualificationRecap: 8.5,
-		discovery: 8.5,
-		championBuilding: 8.5,
-		businessCaseBuilding: 8.5,
-		objectionHandling: 8.5,
+		name: 'Kailyn D',
+		intro: 9,
+		callControl: 9,
+		qualificationRecap: 3,
+		discovery: 9,
+		championBuilding: 8,
+		businessCaseBuilding: 5,
+		objectionHandling: 8,
 		closingAbilities: 8,
 	},
 	{
-		name: 'Christopher',
-		intro: 8.5,
-		callControl: 8.5,
-		qualificationRecap: 8.5,
-		discovery: 8.5,
-		championBuilding: 8.5,
-		businessCaseBuilding: 8.5,
-		objectionHandling: 8.5,
-		closingAbilities: 9.5,
+		name: 'Christopher S',
+		intro: 6,
+		callControl: 9,
+		qualificationRecap: 9,
+		discovery: 9,
+		championBuilding: 9,
+		businessCaseBuilding: 'NA',
+		objectionHandling: 7,
+		closingAbilities: 10,
 	},
 	{
 		name: 'Chris P',
-		intro: 8.5,
-		callControl: 7.5,
-		qualificationRecap: 7.5,
-		discovery: 7.5,
-		championBuilding: 7.5,
-		businessCaseBuilding: 8,
-		objectionHandling: 7.5,
+		intro: 5,
+		callControl: 7,
+		qualificationRecap: 6,
+		discovery: 7,
+		championBuilding: 7,
+		businessCaseBuilding: 4,
+		objectionHandling: 5,
 		closingAbilities: 9,
 	},
 ]
@@ -203,14 +203,16 @@ function Scoring() {
 					{element.name}
 				</div>
 			</Table.Td>
-			<Table.Td>{element.intro}</Table.Td>
-			<Table.Td>{element.callControl}</Table.Td>
-			<Table.Td>{element.qualificationRecap}</Table.Td>
-			<Table.Td>{element.discovery}</Table.Td>
-			<Table.Td>{element.championBuilding}</Table.Td>
-			<Table.Td>{element.businessCaseBuilding}</Table.Td>
-			<Table.Td>{element.objectionHandling}</Table.Td>
-			<Table.Td>{element.closingAbilities}</Table.Td>
+			<Table.Td className="text-center">{element.intro}</Table.Td>
+			<Table.Td className="text-center">{element.callControl}</Table.Td>
+			<Table.Td className="text-center">{element.qualificationRecap}</Table.Td>
+			<Table.Td className="text-center">{element.discovery}</Table.Td>
+			<Table.Td className="text-center">{element.championBuilding}</Table.Td>
+			<Table.Td className="text-center">
+				{element.businessCaseBuilding}
+			</Table.Td>
+			<Table.Td className="text-center">{element.objectionHandling}</Table.Td>
+			<Table.Td className="text-center">{element.closingAbilities}</Table.Td>
 		</Table.Tr>
 	))
 
@@ -218,23 +220,35 @@ function Scoring() {
 		<>
 			<Title order={3}>Call Scoring Per Rubrik</Title>
 			<Table.ScrollContainer minWidth={10}>
-				<Table verticalSpacing="sm">
+				<Table verticalSpacing="sm" layout="fixed" className="!w-fit">
 					<Table.Thead>
 						<Table.Tr>
-							<Table.Th>Name</Table.Th>
-							<Table.Th>Intro</Table.Th>
-							<Table.Th>Call Control</Table.Th>
-							<Table.Th>Qualification Recap</Table.Th>
-							<Table.Th>Discovery</Table.Th>
-							<Table.Th>Champion Building</Table.Th>
-							<Table.Th>Business Case Building</Table.Th>
-							<Table.Th>Objection Handling</Table.Th>
-							<Table.Th>Closing Abilities</Table.Th>
+							<TableHeader name={'Name'} />
+							<TableHeader name={'Intro'} />
+							<TableHeader name={'Call Control'} />
+							<TableHeader name={'Qualification Recap'} />
+							<TableHeader name={'Discovery'} />
+							<TableHeader name={'Champion Building'} />
+							<TableHeader name={'Business Case Building'} />
+							<TableHeader name={'Objection Handling'} />
+							<TableHeader name={'Closing Abilities'} />
 						</Table.Tr>
 					</Table.Thead>
 					<Table.Tbody>{rows}</Table.Tbody>
 				</Table>
 			</Table.ScrollContainer>
 		</>
+	)
+}
+
+interface TableHeaderProps {
+	name: string
+}
+
+function TableHeader({ name }: TableHeaderProps) {
+	return (
+		<Table.Th>
+			<div className="text-center">{name}</div>
+		</Table.Th>
 	)
 }
