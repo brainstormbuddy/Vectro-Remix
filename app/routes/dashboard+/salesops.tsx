@@ -53,7 +53,7 @@ export default function SalesOpDashboard() {
 const elements = [
 	{
 		link: 'https://grain.com/share/highlight/CKK3D2VslMfwysV5cY71HjxhC2lIoSCdVID3HKFE',
-		description: 'Ref existing customer',
+		description: 'Refer existing customer',
 		name: 'Kailyn D',
 	},
 	{
@@ -82,13 +82,13 @@ function MomentsOfGreatness() {
 	return (
 		<div className="w-min">
 			<Title order={3}>Moments of Greatness</Title>
-			<Table.ScrollContainer minWidth={800}>
-				<Table horizontalSpacing={25}>
+			<Table.ScrollContainer minWidth={700}>
+				<Table horizontalSpacing={10} layout="fixed">
 					<Table.Thead>
 						<Table.Tr>
-							<Table.Th>Rep Name</Table.Th>
+							<Table.Th className="w-1/3">Rep Name</Table.Th>
 							<Table.Th>Description</Table.Th>
-							<Table.Th>Link</Table.Th>
+							<Table.Th className="w-1/5">Link</Table.Th>
 						</Table.Tr>
 					</Table.Thead>
 					<Table.Tbody>{rows}</Table.Tbody>
@@ -132,13 +132,13 @@ function ReviewMoments() {
 	return (
 		<div className="w-min">
 			<Title order={3}>Review Moments</Title>
-			<Table.ScrollContainer minWidth={800}>
-				<Table horizontalSpacing={25}>
+			<Table.ScrollContainer minWidth={700}>
+				<Table horizontalSpacing={10} layout="fixed">
 					<Table.Thead>
 						<Table.Tr>
-							<Table.Th>Name</Table.Th>
+							<Table.Th className="w-1/3">Name</Table.Th>
 							<Table.Th>Description</Table.Th>
-							<Table.Th>Link</Table.Th>
+							<Table.Th className="w-1/5">Link</Table.Th>
 						</Table.Tr>
 					</Table.Thead>
 					<Table.Tbody>{rows}</Table.Tbody>

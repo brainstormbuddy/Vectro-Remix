@@ -166,35 +166,44 @@ function CompanyPositioningAcrossCalls() {
 	return (
 		<>
 			<Title order={3}>Company Positioning Across Calls</Title>
-			<Table.ScrollContainer minWidth={500}>
-				<Table verticalSpacing="sm" horizontalSpacing={30}>
-					<Table.Thead>
-						<Table.Tr>
-							<Table.Th>Key Points</Table.Th>
-							<Table.Th>
-								<div className="mx-auto flex flex-col align-middle">
-									<div className="text-center">Kailyn</div>
-									<div className="text-center">Insurance One</div>
+			{/* <Table.ScrollContainer minWidth={500}> */}
+			<Table
+				verticalSpacing="sm"
+				horizontalSpacing={30}
+				layout="fixed"
+				className="!w-[900px]"
+			>
+				<Table.Thead>
+					<Table.Tr>
+						<Table.Th className="w-96">Key Points</Table.Th>
+						<Table.Th>
+							<div className="mx-auto flex flex-col align-middle">
+								<div className="text-center">Kailyn</div>
+								<div className="text-center">Insurance One</div>
+							</div>
+						</Table.Th>
+						<Table.Th>
+							<div className="mx-auto flex flex-col align-middle">
+								<div className="whitespace-nowrap text-center">
+									Christopher S
 								</div>
-							</Table.Th>
-							<Table.Th>
-								<div className="mx-auto flex flex-col align-middle">
-									<div className="text-center">Christopher S</div>
-									<div className="text-center">Mcdonald Insurance</div>
+								<div className="text-center">Mcdonald Insurance</div>
+							</div>
+						</Table.Th>
+						<Table.Th>
+							<div className="mx-auto flex flex-col align-middle">
+								<div className="whitespace-nowrap text-center">
+									Christopher S
 								</div>
-							</Table.Th>
-							<Table.Th>
-								<div className="mx-auto flex flex-col align-middle">
-									<div className="text-center">Christopher S</div>
-									<div className="text-center">Guidelight</div>
-								</div>
-							</Table.Th>
-							<Table.Th>Total</Table.Th>
-						</Table.Tr>
-					</Table.Thead>
-					<Table.Tbody>{rows}</Table.Tbody>
-				</Table>
-			</Table.ScrollContainer>
+								<div className="text-center">Guidelight</div>
+							</div>
+						</Table.Th>
+						<Table.Th className="w-16">Total</Table.Th>
+					</Table.Tr>
+				</Table.Thead>
+				<Table.Tbody>{rows}</Table.Tbody>
+			</Table>
+			{/* </Table.ScrollContainer> */}
 		</>
 	)
 }
@@ -416,37 +425,35 @@ function FeaturesPitchedAcrossCalls() {
 	return (
 		<>
 			<Title order={3}>Features Pitched Across Calls</Title>
-			<Table.ScrollContainer minWidth={500}>
-				<Table verticalSpacing="sm" layout="auto">
-					<Table.Thead>
-						<Table.Tr>
-							<Table.Th className="w-20">Feature</Table.Th>
-							<Table.Th>
-								<div className="text-center">Kaylin</div>
-								<div className="text-center">Insurance One</div>
-							</Table.Th>
-							<Table.Th>
-								<div className="flex flex-col align-middle">
-									<div className="text-center">Christopher S</div>
-									<div className="text-center">Mcdonald Insurance</div>
-								</div>
-							</Table.Th>
-							<Table.Th>
-								<div className="text-center">Christopher S</div>
-								<div className="text-center">Guidelight</div>
-							</Table.Th>
-							<Table.Th>
-								<div className="text-center">Chris P</div>
-								<div className="text-center">Blueridge</div>
-							</Table.Th>
-							<Table.Th>
-								<div className="text-center">Total</div>
-							</Table.Th>
-						</Table.Tr>
-					</Table.Thead>
-					<Table.Tbody>{rows}</Table.Tbody>
-				</Table>
-			</Table.ScrollContainer>
+			{/* <Table.ScrollContainer minWidth={1000}> */}
+			<Table verticalSpacing="sm" layout="fixed" className="!w-[1000px]">
+				<Table.Thead>
+					<Table.Tr>
+						<Table.Th className="w-96">Feature</Table.Th>
+						<Table.Th>
+							<div className="text-center">Kaylin</div>
+							<div className="text-center">Insurance One</div>
+						</Table.Th>
+						<Table.Th>
+							<div className="whitespace-nowrap text-center">Christopher S</div>
+							<div className="text-center">Mcdonald Insurance</div>
+						</Table.Th>
+						<Table.Th>
+							<div className="whitespace-nowrap text-center">Christopher S</div>
+							<div className="text-center">Guidelight</div>
+						</Table.Th>
+						<Table.Th>
+							<div className="text-center">Chris P</div>
+							<div className="text-center">Blueridge</div>
+						</Table.Th>
+						<Table.Th className="w-16">
+							<div className="text-center">Total</div>
+						</Table.Th>
+					</Table.Tr>
+				</Table.Thead>
+				<Table.Tbody>{rows}</Table.Tbody>
+			</Table>
+			{/* </Table.ScrollContainer> */}
 		</>
 	)
 }
