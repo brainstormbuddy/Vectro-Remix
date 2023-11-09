@@ -1,54 +1,41 @@
-<div align="center">
-  <h1 align="center"><a href="https://www.epicweb.dev/epic-stack">The Epic Stack 🚀</a></h1>
-  <strong align="center">
-    Ditch analysis paralysis and start shipping Epic Web apps.
-  </strong>
-  <p>
-    This is an opinionated project starter and reference that allows teams to
-    ship their ideas to production faster and on a more stable foundation based
-    on the experience of <a href="https://kentcdodds.com">Kent C. Dodds</a> and
-    <a href="https://github.com/epicweb-dev/epic-stack/graphs/contributors">contributors</a>.
-  </p>
-</div>
+# Introduction
 
-```sh
-npx create-epic-app@latest
+This project is built on the [Remix framework](https://remix.run/) and uses the [Epic Stack](https://www.epicweb.dev/epic-stack) for "batteries included" functionality.
+
+## Running locally
+
+```
+npm install
+npm run dev
 ```
 
-[![The Epic Stack](https://github-production-user-asset-6210df.s3.amazonaws.com/1500684/246885449-1b00286c-aa3d-44b2-9ef2-04f694eb3592.png)](https://www.epicweb.dev/epic-stack)
+Here are the node and npm versions that this works with:
+```
+❯ npm version
+{
+  npm: '9.4.0',
+  node: '19.6.0',
+  v8: '10.8.168.25-node.11',
+  uv: '1.44.2',
+  zlib: '1.2.11',
+  brotli: '1.0.9',
+  ares: '1.19.0',
+  modules: '111',
+  nghttp2: '1.51.0',
+  napi: '8',
+  llhttp: '8.1.0',
+  uvwasi: '0.0.15',
+  acorn: '8.8.2',
+  simdutf: '3.1.0',
+  undici: '5.16.0',
+  openssl: '1.1.1s',
+  cldr: '42.0',
+  icu: '72.1',
+  tz: '2022e',
+  unicode: '15.0'
+}
+❯ node --version
+v19.6.0`
+```
 
-[The Epic Stack](https://www.epicweb.dev/epic-stack)
-
-<hr />
-
-## Watch Kent's Introduction to The Epic Stack
-
-[![Epic Stack Talk slide showing Flynn Rider with knives, the text "I've been around and I've got opinions" and Kent speaking in the corner](https://github-production-user-asset-6210df.s3.amazonaws.com/1500684/277818553-47158e68-4efc-43ae-a477-9d1670d4217d.png)](https://www.epicweb.dev/talks/the-epic-stack)
-
-["The Epic Stack" by Kent C. Dodds](https://www.epicweb.dev/talks/the-epic-stack)
-
-## Docs
-
-[Read the docs](https://github.com/epicweb-dev/epic-stack/blob/main/docs)
-(please 🙏).
-
-## Support
-
-- 🆘 Join the
-  [discussion on GitHub](https://github.com/epicweb-dev/epic-stack/discussions)
-  and the [KCD Community on Discord](https://kcd.im/discord).
-- 💡 Create an
-  [idea discussion](https://github.com/epicweb-dev/epic-stack/discussions/new?category=ideas)
-  for suggestions.
-- 🐛 Open a [GitHub issue](https://github.com/epicweb-dev/epic-stack/issues) to
-  report a bug.
-
-## Branding
-
-Want to talk about the Epic Stack in a blog post or talk? Great! Here are some
-assets you can use in your material:
-[EpicWeb.dev/brand](https://epicweb.dev/brand)
-
-## Thanks
-
-You rock 🪨
+We also have Github actions CI connected to the master branch of this repo which auto-deploys to https://vectro.fly.dev/dashboard
